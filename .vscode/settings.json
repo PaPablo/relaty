@@ -1,0 +1,6 @@
+{
+  "python.pythonPath": "/home/pablo/.virtualenvs/relaty-4avaRdKS/bin/python",
+  "python.linting.flake8Enabled": true,
+  "python.linting.pylintEnabled": false,
+  "python.linting.mypyEnabled": true
+}
