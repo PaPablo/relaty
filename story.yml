@@ -1,0 +1,20 @@
+story:
+  chapters:
+    # List of chapters
+    - title: chapter 1
+      # List of screens
+      screens:
+        - title: Una historia
+          body: Erase una vez un
+          options:
+            - title: Perro
+              body: Un perro que vivia en paz con su familia
+              finish:
+
+            - title: Gato
+              body: Un gato que vivia en las calles feliz
+              finish:
+
+            - title: Vaca
+              body: Una vaca que vivia feliz en el campo
+              finish:
