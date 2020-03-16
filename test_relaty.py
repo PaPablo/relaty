@@ -1,6 +1,6 @@
 import unittest
 
-from relaty import Relat
+from components.relat import Relat
 
 
 class TestRelaty(unittest.TestCase):

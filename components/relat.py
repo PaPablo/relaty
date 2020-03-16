@@ -1,5 +1,5 @@
 import yaml
-from story import Story
+from components.story import Story
 
 
 class Relat():

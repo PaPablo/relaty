@@ -59,4 +59,7 @@ class Story():
 
         option_number = self.display_options()
 
+        if option_number is None:
+            return
+
         self.options[option_number-1].play()

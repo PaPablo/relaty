@@ -1,5 +1,5 @@
 import click
-from relat import Relat
+from components.relat import Relat
 
 
 @click.group()
