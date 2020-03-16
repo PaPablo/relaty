@@ -1,6 +1,6 @@
 import unittest
 
-from relaty import Relaty, Story
+from relaty import Relat
 
 
 class TestRelaty(unittest.TestCase):
@@ -46,14 +46,14 @@ class TestRelaty(unittest.TestCase):
                 - FIN
         """
 
-        self.relat = Relaty(document)
+        self.relat = Relat(document)
         self.story = self.relat.story
 
     def test_story_should_have_a_title(self):
         document = """
         otro:otro
         """
-        self.assertRaises(TypeError, Relaty, document)
+        self.assertRaises(TypeError, Relat, document)
 
     def test_screens_are_created_correctly(self):
 
@@ -70,7 +70,7 @@ class TestRelaty(unittest.TestCase):
         cosos: no?
         """
 
-        self.assertRaises(TypeError, Relaty, failed_document)
+        self.assertRaises(TypeError, Relat, failed_document)
 
     def test_relat_has_correct_number_of_endings(self):
         expected_endings = 4
