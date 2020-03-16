@@ -1,0 +1,35 @@
+title: A title
+screens:
+  - Hello, how are you?
+  - These are two screens
+options:
+  - title: option 1
+    screens:
+      - option 1 screen 1
+      - option 1 screen 2
+    options:
+      - title: option 1.1
+        screens:
+          - option 1.1 screen 1
+          - option 1.1 screen 2
+          - FIN
+      - title: option 1.2
+        screens:
+          - option 1.2 screen 1
+          - option 1.2 screen 2
+        options:
+          - title: option 1.2.1
+            screens:
+              - option 1.2.1 screen 1
+              - option 1.2.1 screen 2
+              - FIN
+          - title: option 1.2.2
+            screens:
+              - option 1.2.2 screen 1
+              - option 1.2.2 screen 2
+              - FIN
+  - title: Option 2
+    screens:
+      - option 2 screen 1
+      - option 2 screen 2
+      - FIN
