@@ -9,7 +9,7 @@ class Story():
     def __init__(
             self,
             title: str,
-            screens: typing.List[str],
+            screens: typing.List[str] = [],
             options: typing.Union[typing.List[typing.Dict], None] = None,
     ):
 

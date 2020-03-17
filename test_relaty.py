@@ -1,4 +1,5 @@
 import unittest
+from yaml import safe_load
 
 from components.relat import Relat
 
@@ -46,14 +47,15 @@ class TestRelaty(unittest.TestCase):
                 - FIN
         """
 
-        self.relat = Relat(document)
+        converted_document = safe_load(document)
+        self.relat = Relat.create_from_document(converted_document)
         self.story = self.relat.story
 
     def test_story_should_have_a_title(self):
         document = """
         otro:otro
         """
-        self.assertRaises(TypeError, Relat, document)
+        self.assertRaises(TypeError, Relat.create_from_document, document)
 
     def test_screens_are_created_correctly(self):
 
@@ -70,10 +72,18 @@ class TestRelaty(unittest.TestCase):
         cosos: no?
         """
 
-        self.assertRaises(TypeError, Relat, failed_document)
+        self.assertRaises(TypeError, Relat.create_from_document, failed_document)
 
     def test_relat_has_correct_number_of_endings(self):
         expected_endings = 4
         actual_endings = self.relat.get_number_endings
 
         self.assertEqual(expected_endings, actual_endings)
+
+    def test_can_create_empty_relat(self):
+        relat_title = "A test Relat"
+        relat = Relat(title=relat_title)
+
+        self.assertEqual(relat.title, relat_title)
+
+    
