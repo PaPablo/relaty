@@ -122,3 +122,72 @@ class TestRelaty(unittest.TestCase):
             self.empty_relat.options[0].title,
             "Option 1"
         )
+
+    def test_add_screen_to_story(self):
+
+        empty_story = Story(title="A story", screens=[])
+
+        screen = "A screen"
+
+        empty_story.add_screen(screen)
+
+        # Test screen was added
+        self.assertEqual(
+            len(empty_story.screens),
+            1
+        )
+
+        # Test added screen is given screen
+        self.assertEqual(
+            empty_story.screens[0],
+            screen
+        )
+
+    def test_an_option_can_be_added_to_story(self):
+        empty_story = Story(title="A story", screens=[])
+
+        screen = "A screen"
+
+        empty_story.add_screen(screen)
+
+        option = Story(title="Option 1", screens=["An option screen"])
+
+        empty_story.add_option(option)
+
+        # Test screen was added
+        self.assertEqual(
+            len(empty_story.options),
+            1
+        )
+
+        # Test added screen is given screen
+        self.assertEqual(
+            empty_story.options[0].title,
+            "Option 1"
+        )
+
+    def test_an_option_can_be_retrieved_navigating_story(self):
+
+        option1 = self.story_from_document.get_option(0)
+
+        self.assertEqual(
+            option1.title,
+            "option 1"
+        )
+
+        option2 = self.story_from_document.get_option(1)
+
+        self.assertEqual(
+            option2.title,
+            "Option 2"
+        )
+
+        option121 = self.story_from_document\
+            .get_option(0).get_option(1).get_option(0)
+
+        self.assertEqual(
+            option121.title,
+            "option 1.2.1"
+        )
+
+

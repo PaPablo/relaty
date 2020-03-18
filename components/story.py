@@ -56,6 +56,11 @@ class Story():
             self.options = []
         self.options.append(option)
 
+    def get_option(self, number):
+        if self.options is None:
+            return None
+        return self.options[number]
+
     def play(self):
         # Print title
         print(self.title)
