@@ -48,6 +48,14 @@ class Story():
             print("The input wasn't valid, try again")
             self.display_options()
 
+    def add_screen(self, screen: str):
+        self.screens.append(screen)
+
+    def add_option(self, option: 'Story'):
+        if self.options is None:
+            self.options = []
+        self.options.append(option)
+
     def play(self):
         # Print title
         print(self.title)

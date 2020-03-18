@@ -27,5 +27,19 @@ class Relat():
     def title(self):
         return self.story.title
 
+    @property
+    def screens(self):
+        return self.story.screens
+
+    @property
+    def options(self):
+        return self.story.options
+
+    def add_screen(self, screen: str):
+        self.story.add_screen(screen)
+
+    def add_option(self, option: Story):
+        self.story.add_option(option)
+
     def play(self):
         self.story.play()
