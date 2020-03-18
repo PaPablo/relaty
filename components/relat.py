@@ -1,4 +1,3 @@
-import yaml
 from components.story import Story
 
 
