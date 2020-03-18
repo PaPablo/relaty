@@ -61,6 +61,29 @@ class Story():
             return None
         return self.options[number]
 
+    def shallow_equal(self, story: 'Story'):
+        return \
+            self.title == story.title and all(
+                [a == b
+                 for a, b in zip(self.screens, story.screens)])
+
+    def __eq__(self, other):
+        # If it's not a Story
+        if not isinstance(other, Story):
+            return False
+
+        # If it's not shallow equal
+        if not self.shallow_equal(other):
+            return False
+
+        if self.options is None or other.options is None:
+            return False
+
+        if len(self.options) != len(other.options):
+            return False
+
+        return self.options == other.options
+
     def play(self):
         # Print title
         print(self.title)

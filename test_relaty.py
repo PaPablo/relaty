@@ -190,4 +190,73 @@ class TestRelaty(unittest.TestCase):
             "option 1.2.1"
         )
 
+    def test_shallow_equals_returns_true_if_title_and_screens_are_equal(self):
+        o1 = Story(title="Option 1", screens=["O1 screen"])
 
+        s1 = Story(
+            title="Story 1",
+            screens=["Screen 1"],
+        )
+        s1.options = [o1]
+
+        s2 = Story(
+            title="Story 1",
+            screens=["Screen 1"],
+            options=[]
+        )
+
+        s3 = Story(
+            title="Story 1",
+            screens=["Screen"],
+            options=[]
+        )
+
+        self.assertTrue(
+            s1.shallow_equal(s2)
+        )
+
+        self.assertFalse(
+            s1.shallow_equal(s3)
+        )
+
+    def test_equals_returns_true_if_storys_are_similar_and_shallow_equal(self):
+        o1 = Story(title="Option 1", screens=["O1 screen"])
+
+        s1 = Story(
+            title="Story 1",
+            screens=["Screen 1"],
+        )
+        s1.options = [o1]
+
+        s2 = Story(
+            title="Story 1",
+            screens=["Screen 1"],
+        )
+        s2.options = [o1]
+
+        s3 = Story(
+            title="Story 1",
+            screens=["Screen"],
+            options=[]
+        )
+
+        s4 = Story(
+            title="Story 1",
+            screens=["Screen 1"],
+        )
+
+        self.assertNotEqual(
+            s1, 1
+        )
+
+        self.assertNotEqual(
+            s1, s3
+        )
+
+        self.assertNotEqual(
+            s1, s4
+        )
+
+        self.assertEqual(
+            s1, s2
+        )
