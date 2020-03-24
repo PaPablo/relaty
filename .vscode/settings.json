@@ -1,15 +1,9 @@
 {
-  "python.pythonPath": "/home/pablo/.virtualenvs/relaty-4avaRdKS/bin/python",
+  "python.pythonPath": "/home/pablo/.virtualenvs/relaty/bin/python",
   "python.linting.flake8Enabled": true,
   "python.linting.pylintEnabled": false,
   "python.linting.mypyEnabled": true,
-  "python.testing.unittestArgs": [
-    "-v",
-    "-s",
-    ".",
-    "-p",
-    "test_*.py"
-  ],
+  "python.testing.unittestArgs": ["-v", "-s", ".", "-p", "test_*.py"],
   "python.testing.pytestEnabled": false,
   "python.testing.nosetestsEnabled": false,
   "python.testing.unittestEnabled": true
