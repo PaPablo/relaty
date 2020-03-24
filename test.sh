@@ -7,5 +7,5 @@ do
     else
         paplay /usr/share/sounds/freedesktop/stereo/complete.oga 2> /dev/null
     fi
-    inotifywait -e modify ./**.py
+    inotifywait -e modify ./**.py ./**/*.py
 done
