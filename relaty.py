@@ -1,5 +1,6 @@
 import click
 from components.relat import Relat
+import yaml
 
 
 @click.group()
@@ -10,8 +11,8 @@ def relaty():
 @click.command(help="Play a story")
 @click.argument("story_path")
 def play(story_path):
-    file = open(story_path)
-    relat = Relat(file)
+    document=yaml.safe_load(open(story_path))
+    relat = Relat.create_from_document(document=document)
 
     relat.play()
 
