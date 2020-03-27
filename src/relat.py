@@ -1,7 +1,14 @@
-from components.story import Story
+from .story import Story
 
 
 class Relat():
+    """ Represents the start of an interactive story. 
+
+    Relat comes from the catalan word for _tale_
+
+    Attributes:
+        story (Story): a story, the entry point of the narrative
+    """
     story: Story
 
     def __init__(self, title, *args, **kwargs):

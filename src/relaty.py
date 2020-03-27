@@ -1,5 +1,5 @@
 import click
-from components.relat import Relat
+from .relat import Relat
 import yaml
 
 

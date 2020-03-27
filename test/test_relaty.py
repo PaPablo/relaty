@@ -1,7 +1,8 @@
 import unittest
 from yaml import safe_load
 
-from components.relat import Relat, Story
+from src.relat import Relat
+from src.story import Story
 
 
 class TestRelaty(unittest.TestCase):
