@@ -7,11 +7,14 @@ Welcome to relaty's documentation!
 ==================================
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 4
    :caption: Contents:
 
+   interactive-fiction
+   getting-started
    modules
-   
+
+
 Indices and tables
 ==================
 

@@ -2,7 +2,7 @@ from .story import Story
 
 
 class Relat():
-    """ Represents the start of an interactive story. 
+    """ Represents the start of an interactive story.
 
     Relat comes from the catalan word for _tale_
 
@@ -74,6 +74,6 @@ class Relat():
         It shows every screen and ask for confirmation to continue.
 
         Then displays each options and asks the user to choose one
-        
+
         """
         self.story.play()
