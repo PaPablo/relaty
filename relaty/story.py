@@ -84,6 +84,14 @@ class Story():
 
         return self.options == other.options
 
+    def navigate(self, path: typing.List[int]):
+        result = self
+
+        for option in path:
+            result = result.get_option(option)
+
+        return result
+
     def play(self):
         # Print title
         print(self.title)

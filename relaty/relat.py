@@ -1,5 +1,7 @@
 from .story import Story
 
+from typing import List
+
 
 class Relat():
     """ Represents the start of an interactive story.
@@ -66,6 +68,11 @@ class Relat():
     def add_option(self, option: Story):
         """Adds and option to the root-level options of the Relat"""
         self.story.add_option(option)
+
+    def navigate(self, path):
+        """Returns the story at the path"""
+
+        return self.story.navigate(path)
 
     def play(self):
         """Play the story in cli mode

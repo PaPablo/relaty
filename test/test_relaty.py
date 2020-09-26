@@ -261,3 +261,9 @@ class TestRelaty(unittest.TestCase):
         self.assertEqual(
             s1, s2
         )
+
+    def test_navigating_with_valid_paths_works(self):
+        path1 = [0, 0]
+
+        self.assertEqual(self.relat_from_document.navigate(
+            path1).screens[0], "option 1.1 screen 1")
